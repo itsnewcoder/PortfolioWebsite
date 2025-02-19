@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.portfolio {
+  display: flex;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+  color: #00ffcc;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Main Content */
+main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+/* Sections Styling */
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  transition: background 0.3s;
+}
+
+/* Background colors for different sections */
+#Home { background: linear-gradient(135deg, #1a1a1a, #333); }
+#About { background: linear-gradient(135deg, #333, #444); }
+#Projects { background: linear-gradient(135deg, #444, #555); }
+#Skills { background: linear-gradient(135deg, #555, #666); }
+#Experience { background: linear-gradient(135deg, #666, #777); }
+#Education { background: linear-gradient(135deg, #777, #888); }
+#Blog { background: linear-gradient(135deg, #888, #999); }
+#Contact { background: linear-gradient(135deg, #999, #aaa); }
+#Resume { background: linear-gradient(135deg, #aaa, #bbb); }
+
+/* Hero Section */
+.hero h1 {
+  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-top: 10px;
+  color: #00ffcc;
+}
+
+/* Project Cards */
+.project-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.project-card p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+.project-card a {
+  display: block;
+  margin-top: 10px;
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Skill Buttons */
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill {
+  background: #00ffcc;
+  color: #121212;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #fff;
+  color: #121212;
+}
+
+/* Blog Section */
+#Blog {
+  text-align: center;
+}
+
+#Blog p {
+  font-size: 20px;
+  color: #ddd;
+}
+
+/* Contact Section */
+#Contact p {
+  font-size: 18px;
+}
+
+#Contact p a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+#Contact p a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Section */
+#Resume a {
+  background: #00ffcc;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#Resume a:hover {
+  background: #fff;
+  color: #121212;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  main {
+    margin-left: 100px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
